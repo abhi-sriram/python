@@ -1,5 +1,5 @@
 
-
+# sudoku grid
 grid = [
         [0,0,0,0,9,1,4,0,0],
         [0,0,0,7,0,0,0,0,0],
@@ -12,6 +12,7 @@ grid = [
         [0,0,7,8,1,0,0,0,0]
         ]
 
+# printing sudoku grid
 def print_grid():
   global grid
   for i in range(9):
@@ -20,6 +21,8 @@ def print_grid():
     print()
 
 
+# checking row column and 3x3 box of grid
+# If number exists, it returns False. If all conditions completes without return False it returns True, accepting number can be set in that position.
 def check_row_col_mat(x,y,n):
   global grid
 
@@ -43,6 +46,8 @@ def check_row_col_mat(x,y,n):
 
   return True
 
+
+# solving sudoku using recursive by backtracing the wrong choices
 def solve():
   global grid
   for r in range(9):
